@@ -1,2 +1,2 @@
 # Frontendmentore-landingpages
-7 landing pages whom I style with CSS to practice mt Html CSS After beginner Course.
+7 landing pages which I style with CSS to practice my Html CSS After taking beginner Courses.

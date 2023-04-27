@@ -1,0 +1,175 @@
+@import url("https://fonts.google.com/specimen/Barlow+S+Condensed");
+/*basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+ /* Set core root defaults */
+ html:focus-within {
+    scroll-behavior: smooth;
+}
+  
+
+/* variables */
+:root {
+    /* primary */
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    /* neutrals */
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+
+    /* fonts */
+    --family: "Barlow Semi Condensed";
+    --font-weights: 500;
+    --font-weightxl: 700;
+    /* font size */
+    --font-size: 1rem
+
+}
+
+/* all utility classes */
+/* profile */
+.profile {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+} 
+.profile .img-profile {
+    width: 3rem;
+    border-radius: 50%; 
+}
+.profile-text{
+    color: var(--Light-gray);
+    font-size: 1.2rem;
+}
+
+span {
+    color: rgb(255, 255, 255);
+    opacity: 100%;
+}
+
+.black {
+    color: rgb(0, 0, 0);
+}
+
+/* heading */
+.headline {
+    color: var(--White);
+    font-size: 1.3rem;
+}
+.gray {
+    color: var(--Very-dark-grayish-blue);
+}
+
+/*review */
+.review {
+    color: var(--Light-gray);
+    opacity: 70%;
+}
+
+/* genral styling */
+body {
+    font-family: var(--family) Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    min-height: 100vh;
+}
+main {
+    display: grid;
+    gap: 2rem;
+    margin: 6% 3%;
+    gap: 2rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five";
+}
+
+.article-1, .article-2, .article-3, .article-4, .article-5 {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 15px;
+}
+.article-1 {
+    margin-top: 2rem;
+    background-color:var(--Moderate-violet) ;
+    background-image: url("images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position:top right;
+    grid-area: one;
+}
+
+.article-2 {
+    background-color: var(--Very-dark-grayish-blue);
+    grid-area: two;
+}
+.article-3 {
+    background-color: var(--White);
+    box-shadow: 2px 2px 5px 1px rgb(199, 184, 184);
+    grid-area: three;
+}
+
+.article-4 {
+    background-color: var(--Very-dark-blackish-blue);
+    grid-area: four;
+}
+
+.article-5 {
+    background-color: var(--White);
+    box-shadow: 2px 2px 5px 1px rgb(199, 184, 184);
+    grid-area: five;
+}
+.article-3 p,.article-5 p {
+    color: var(--Very-dark-grayish-blue);
+
+}
+
+/* grid */
+@media (min-width: 33em) {
+    main {
+        grid-template-areas:
+        "one one"
+        "two three"
+        "five five"
+        "four four";
+    }
+  }
+  
+@media screen and (min-width: 40em) {
+    main {
+      grid-template-areas:
+       'one one'
+       'two five'
+       'three five'
+       'four four';
+    }
+  }
+
+@media screen and (min-width: 54em) {
+    main {
+        grid-template-areas:
+        "one one two"
+        "five five five"
+        "three four four";
+    }
+  }
+  
+@media (min-width:70em) {
+    main {
+        grid-template-areas: 
+        "one one two five"
+        "three four four five";
+    }
+}

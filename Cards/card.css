@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img , svg, picture {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    font-weight: 500;
+    margin:  0 1rem;
+
+}
+
+.grid {
+    display: grid;
+    grid-template-columns:  1fr;
+    gap: 8rem;
+    place-content: center;
+    
+}
+.cards-space {
+    background-image: url("images/bg-main-mobile.png");
+    background-repeat: no-repeat;
+    background-size: auto 100vw;
+    position: relative;
+    min-height: 60vh;
+   
+}
+.color {
+    width: min-content;
+    position: absolute;
+    z-index: 1;
+    top: 65%;
+    max-width: 75%;
+
+}
+.white {
+    width: min-content;
+    position: absolute;
+    right: 0;
+    top: 30%;
+}
+
+.color > *:not(.rang),
+.white > *:not(.rang2) {
+    position: absolute;
+}
+
+.rang {
+    max-width: revert;
+    max-width: 400px;
+    margin-left: 1rem;
+}
+.white .rang2  {
+    max-width: revert;
+    max-width: 400px;
+    margin-right: 1rem;
+}
+
+.logo {
+    top: 2rem;
+    left: 2rem;
+
+}
+.numbers {
+    font-size: 1.5rem;
+    top: 50%;
+    left: 2rem;
+   
+}
+.name {
+    bottom: 2rem;
+    left: 2rem;
+
+}
+.date {
+    bottom: 2rem;
+    right: 2rem;
+}
+.a123 {
+    top: 44.5%;
+    right: 3.4rem;
+}
+
+label {
+    font-size: 0.95rem;
+    margin:5rem 0;
+    color: blueviolet;
+}
+
+.text {
+    width: 80%;
+    padding: 0.5em 1rem;
+    text-align:left;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    border: 2px solid rosybrown;
+    margin: 0.5rem 0;
+}
+
+.info {
+    padding-left: 2rem;
+    line-height: 1.7;
+}
+.mm, .yy{
+    width:15%;
+    padding: 0.2em 0.4em;
+    font-size:1.1rem ;
+    border-radius: 20px;
+    border:  2px solid rosybrown;
+}
+.cvc {
+    margin-bottom: 1.5rem;
+    margin-top: 0.8rem;
+   
+    width:35%;
+    padding: 0.2em 0.4em;
+    font-size:1.1rem ;
+    border-radius: 20px;
+    border:  2px solid rosybrown;
+}
+button{
+    display: block;
+    margin-top:  1rem;
+    padding: 0.7em 10rem;
+    background: 20px; 
+    background-color: purple;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    border: none;
+}
+button:hover, button:focus-within {
+    opacity: 50%;
+
+}
+@media (min-width:60em) { 
+    .grid {
+        grid-template-columns:  1fr 1fr auto;
+
+    }
+    .cards-space {
+        background-image: url("images/bg-main-desktop.png");
+        background-size: cover;
+        grid-column: 1/ span 1;
+        grid-row: 1 / 5;
+        border: 2px solid;
+        
+    }
+    .color {
+        inset: revert;
+        margin-top: 5rem;
+        left: 40%;
+    }
+    .white {
+        margin-top: 4rem;
+        left: 60%;
+
+    }
+    .info {
+        width: 80%;
+        margin-top: 15rem;
+        margin-left: auto;
+     
+    }
+    
+}

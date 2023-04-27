@@ -1,0 +1,311 @@
+@import url("https://fonts.google.com/specimen/Raleway");
+@import url("https://fonts.google.com/specimen/Open+Sans");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Make images easier to work with */
+img,
+picture,svg {
+  max-width: 100%;
+  display: block;
+}
+a {
+  text-decoration:none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,ol {
+  list-style: none;
+}
+/* variable*/
+:root {
+
+/* primary */
+ --Very-Dark-Blue: hsl(243, 87%, 12%);
+ --Desaturated-Blue: hsl(238, 22%, 44%);
+
+/* Accent */
+--Bright-blue: hsl(224, 93%, 58%);
+--Moderate-Cyan: hsl(170, 45%, 43%);
+
+/* neutral */
+--Light-Grayish-Blue: hsl(240, 75%, 98%);
+--Light-Gray: hsl(0, 0%, 75%);
+
+/* headings header navigation */
+--family-heading:"Raleway"; 
+/* body */
+}
+
+/* utility classes */
+.h2 {
+    color: var(--Very-Dark-Blue);
+    font-family: var(--family-heading);
+}
+
+/* genral styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+/* navigatin */
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: no-wrap;
+    align-items: center;
+}
+.header-nav img {
+    width:200% ;
+    margin: 2rem 1rem;
+    padding: 0 1rem;
+}
+
+.navigation {
+    margin: 2rem 0.4rem 2rem 1rem;
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+.navigation a {
+  color: var(--Desaturated-Blue);
+}
+.navigation a:hover,a:focus-visible {
+  color: hsla(240, 22%, 44%, 0.5);
+}
+
+@media (min-width:40em) {
+  .navigation {
+    font-size: 1.2rem;
+  }
+  .header-nav img {
+    width: 100%;
+  }
+
+}
+
+/* main text */
+.main-item {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.flex-item1 {
+  display: flex;
+  flex-direction: column;
+  gap:1.5rem;
+  text-align: center;
+  align-items: center;
+}
+
+.flex-item1 .main-p {
+  color: var(--Light-Gray);
+}
+.flex-item1 .main-h1 {
+  color: var(--Very-Dark-Blue);
+}
+.email {
+  text-align: center;
+  width: 100%;
+  padding: 0.8rem;
+  
+}
+.buttons {
+  margin-top: 1rem;
+  width: 80%;
+  padding: 0.8rem;
+  background-color: var(--Bright-blue);
+  border: none;
+}
+.buttons a {
+  color: whitesmoke;
+}
+.buttons:hover {
+  background-color: hsla(224, 93%, 58%, 0.642) ;
+}
+
+/* secondary item */
+.second-item{
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem 2rem;
+  padding: 2rem;
+ align-items: center;
+}
+.flex-item2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+.flex-item2 p {
+  color: var(--Desaturated-Blue);
+  padding: 1.6rem;
+}
+.green-link{
+  color: var(--Moderate-Cyan);
+  text-decoration: underline;
+  margin-bottom: 2rem;
+}
+.green-link:hover {
+  color:hsla(170, 45%, 43%, 0.696); ;
+}
+.green-link img {
+  display: inline;
+}
+
+.qoutes {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid whitesmoke;
+  padding: 2rem;
+  position: relative;
+}
+.qoutes .quo {
+  line-height: 1.7;
+  width: 38ch;
+  color: var(--Very-Dark-Blue);
+}
+.qoutes img {
+  width: 50px;
+  border-radius: 50%;
+}
+.qoutes .name {
+  position: absolute;
+  left: 100px;
+  bottom: 35px;
+  color: var(--Light-Gray);
+}
+.qoutes .title {
+  color: var(--Very-Dark-Blue);
+}
+
+
+/* last item */
+.flex-item3 {
+  background-color: var(--Desaturated-Blue);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+ 
+  padding: 1.5rem;
+  color: var(--Light-Grayish-Blue);
+  padding-bottom: 6rem;
+  padding-top: 6rem;
+  
+}
+.text h2{
+  text-align: center;
+  margin: 1rem;
+}
+.text p {
+  text-align: center;
+  width: 40ch;
+}
+.flex-item3 .buttons-last {
+  display: flex;
+  flex-direction: column;
+  
+}
+/* footer */
+footer {
+  background-color: var(--Very-Dark-Blue);
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  gap: 3rem;
+  color: var(--Light-Grayish-Blue);
+}
+.footer-div1 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer-div1 img {
+  float: left;
+  padding-right: 1rem;
+}
+
+.footer-div2 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+}
+ul li a {
+  color:var(--Light-Grayish-Blue) ;
+}
+.footer-div3 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer-div4 {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+/* deskop */
+@media (min-width:40em) {
+  .main-item {
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+    flex-direction: row-reverse;
+  }
+  .flex-button {
+    display: flex;
+    gap: 2rem;
+  }
+  .email {
+    width: 250px;
+  }
+  .buttons {
+    width: 150px;
+    margin: 0;
+    border-radius: 10px;
+  }
+
+  /* secondary item */
+  .second-item {
+    flex-direction: row-reverse;
+  }
+  .second-item p {
+    padding: 0;
+  }
+  .green-link {
+    text-align: none;
+  }
+  /* third item */
+  .flex-item3 {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .buttons-last .email {
+    width: 300px;
+    margin-bottom: 1rem;
+  }
+  .buttons-last .buttons {
+    width: 300px;
+  }
+  /* footer */
+  footer {
+    flex-direction: row;
+    gap: 9rem;
+  }
+  .footer-div4 {
+    flex-direction: column;
+  }
+
+
+ 
+}

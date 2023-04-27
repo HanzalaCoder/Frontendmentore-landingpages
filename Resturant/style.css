@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+}
+
+img,svg,picture,figure {
+    max-width: 100%;
+    display: block;
+}
+a {
+    text-decoration: none;
+    color: hwb(0 0% 100%);
+}
+a:hover, a:focus-within {
+    color: hwb(0 0% 100% / 0.422);
+    text-decoration: underline;
+}
+
+/* genral styling */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    min-height: 100vh;
+}
+.upper {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: brown;
+}
+.upper figure {
+    width: 50%;
+    padding: 0rem 1rem;
+}
+
+.upper ul {
+    display: flex;
+    gap: 1rem;
+    padding: 0rem 1rem;
+    align-self: center;
+}
+
+@media (min-width:50em) {
+    .upper {
+        margin-bottom: 4rem;
+        
+    }
+    .upper figure img {
+        max-width: 100%;
+    }
+    .upper ul {
+        font-size: 1.5rem;
+        padding: 2rem;
+    }
+    
+}
+
+/* header part 2 */
+.upper-side {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2rem;
+    gap: 4rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.upper-side img {
+    max-width: 90%;
+    margin: 0 auto;
+}
+.side-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+.side-header {
+    font-style: italic;
+    font-size: 2.2rem;
+}
+.side-lorem {
+    max-width: 40ch;
+    font-style: italic;
+}
+.side-button {
+    max-width: 20rem;
+    padding: 1em 2em;
+    background-color: orange;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    border: none;
+    font-style: italic;
+}
+.side-button:hover ,.side-button:focus-within {
+    background-color: hsla(39, 100%, 50%, 0.312);
+    color: hsla(0, 0%, 0%, 0.434);
+}
+@media (min-width:50em) {
+    .upper-side {
+        flex-direction: row;
+        gap: 10rem;
+        align-items: center;
+    }
+    .upper-side img {
+        margin: 0;
+        max-width: 100%;
+    }
+
+}
+/* services */
+.services {
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-areas: 
+    "one two"
+    "three three";
+    margin-bottom: 5rem;
+    
+}
+.item1,.item2,.item3 {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 30ch;
+}
+.item1{grid-area: one;}
+.item2{grid-area: two;}
+.item3{grid-area: three;}
+.item3 {
+    margin: 0 auto;
+}
+
+
+@media (min-width:50em) {
+    .services{
+    max-width: 1000px;
+    margin: 0 auto;
+    grid-template-areas: 
+    "one two three";
+    gap: 2rem;
+    }
+    .item3,.item2,.item1 {
+        gap: 1rem;
+        flex-direction: column;
+        text-align: center;
+        width: 16ch;
+        
+    }
+}
+
+@media (max-width:30em) {
+    .services {
+        grid-template-areas: 
+        "one"
+        "two"
+        "three";
+    }
+}
+
+.center {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+.center .side-button {
+    background-color: greenyellow;
+}
+.center .side-button:hover,.center .side-button:focus-within {
+    background-color: rgba(172, 255, 47, 0.725);
+    text-decoration: none;
+}
+.center .side-button a {
+    text-decoration: none;
+}
+/* grid */
+.gridlayout {
+    padding: 0 2rem;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-areas:
+    "one one two three"
+    "one one two four"
+    "five six seven four";
+}
+.box1 {grid-area: one;}
+.box2 {grid-area: two;}
+.box3 {grid-area: three;}
+.box4 {grid-area: five;}
+.box5 {grid-area: six;}
+.box6 {grid-area: seven;}
+.box7 {grid-area: four;}
+/* img animation */
+.all {
+    transition: transform .3s ease;
+}
+.all:hover {
+    transform: scale(1.1);
+}
+/* footer */
+.footer {
+    margin-top: 2rem;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.f_two ul,.f_three ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin: 1rem 0;
+}
+.f_four ul {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.f_four div {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+.email {
+    max-width: 250px ;
+    padding: 0.5rem 2rem;
+    text-align: center;
+}
+@media (min-width:50em) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
